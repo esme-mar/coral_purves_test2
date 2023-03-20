@@ -24,7 +24,7 @@ gz *fastq
 nohup java -jar /data/mcfadden/aquattrini/PROGRAMS/trimmomatic-0.35/trimmomatic-0.35.jar PE -threads 4 SRR9648437_1.fastq.gz SRR9648437_2.fastq.gz 
 /data/mcfadden/smoaleman/esme/trimmed_reads/SRR9648437_R1_PE_trimmed.fastq.gz /data/mcfadden/smoaleman/esme/trimmed_reads/SRR9648437_R1_SE_trimmed.fastq.gz 
 /data/mcfadden/smoaleman/esme/trimmed_reads/SRR9648437_R2_PE_trimmed.fastq.gz /data/mcfadden/smoaleman/esme/trimmed_reads/SRR9648437_R2_SE_trimmed.fastq.gz 
-ILLUMINACLIP:/data/mcfadden/smoaleman/esme/TruSeq3-PE-2.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLENGTH:36 
+ILLUMINACLIP:/data/mcfadden/smoaleman/esme/TruSeq3-PE-2.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36 
 
 echo "Trimmomatic finished running!"
 
