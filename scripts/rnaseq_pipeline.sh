@@ -40,7 +40,7 @@ ILLUMINACLIP:/data/mcfadden/smoaleman/esme/TruSeq3-PE-2.fa:2:30:10:2:keepBothRea
  
 #rerun fastqc to check quality of trimmed reads
 
-fastqc /data/mcfadden/smoaleman/esme/trimmed_reads/*.fastq.gz -o /data/mcfadden/smoaleman/esme/trimmed_reads #provide output directory
+fastqc /data/mcfadden/smoaleman/esme/trimmed_reads/SRR9648437*.fastq.gz -o /data/mcfadden/smoaleman/esme/trimmed_reads #provide output directory
 
 scp smoaleman@purves.cs.hmc.edu:/data/mcfadden/smoaleman/esme/trimmed_reads/*fastqc.zip ~/Desktop
 
