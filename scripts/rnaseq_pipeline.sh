@@ -46,7 +46,8 @@ scp smoaleman@purves.cs.hmc.edu:/data/mcfadden/smoaleman/esme/trimmed_reads/*fas
 
 
 # TRINITY
- Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G 
+ #Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G 
+ # --no_bowtie parameter added due to issue finding "bowtie2-build" file/dir
  
- /data/mcfadden/aquattrini/PROGRAMS/trinityrnaseq-Trinity-v2.4.0/Trinity --seqType fq --SS_lib_type RF --left /data/mcfadden/smoaleman/esme/trimmed_reads2/SRR14577702_R1_PE_trimmed.fastq.gz --right /data/mcfadden/smoaleman/esme/trimmed_reads2/SRR14577702_R2_PE_trimmed.fastq.gz --CPU 12 --max_memory 20G
+ /data/mcfadden/aquattrini/PROGRAMS/trinityrnaseq-Trinity-v2.4.0/Trinity --no_bowtie --seqType fq --SS_lib_type RF --left /data/mcfadden/smoaleman/esme/trimmed_reads2/SRR14577702_R1_PE_trimmed.fastq.gz --right /data/mcfadden/smoaleman/esme/trimmed_reads2/SRR14577702_R2_PE_trimmed.fastq.gz --CPU 12 --max_memory 20G
 
