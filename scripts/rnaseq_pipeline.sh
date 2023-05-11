@@ -51,3 +51,6 @@ scp smoaleman@purves.cs.hmc.edu:/data/mcfadden/smoaleman/esme/trimmed_reads/*fas
  
  /data/mcfadden/aquattrini/PROGRAMS/trinityrnaseq-Trinity-v2.4.0/Trinity --no_bowtie --seqType fq --SS_lib_type RF --left /data/mcfadden/smoaleman/esme/trimmed_reads2/SRR14577702_R1_PE_trimmed.fastq.gz --right /data/mcfadden/smoaleman/esme/trimmed_reads2/SRR14577702_R2_PE_trimmed.fastq.gz --CPU 12 --max_memory 20G
 
+# create file that only contains the longest isoform of each sequence
+
+perl /data/mcfadden/aquattrini/PROGRAMS/trinityrnaseq-Trinity-v2.4.0/util/misc/get_longest_isoform_seq_per_trinity_gene.pl /data/mcfadden/smoaleman/esme/assemblies/ssid.trinity.fasta > /data/mcfadden/smoaleman/esme/assemblies/ssid.trinity.longest.fasta
