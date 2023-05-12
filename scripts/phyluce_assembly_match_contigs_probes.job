@@ -1,0 +1,33 @@
+#!/bin/sh
+# ----------------Parameters---------------------- #
+#$ -S /bin/sh
+#$ -pe mthread 16
+#$ -q mThM.q
+#$ -l mres=192G,h_data=12G,h_vmem=12G,himem
+#$ -cwd
+#$ -j y
+#$ -N phyluce_tx_assembly_match_contigs_probes
+#$ -o phyluce_tx_assembly_match_contigs_probes.log
+#$ -m bea
+#$ -M connellym@si.edu
+#
+# ----------------Modules------------------------- #
+ module load bioinformatics/phyluce
+# ----------------Your Commands------------------- #
+#
+echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
+echo + NSLOTS = $NSLOTS
+
+#specify variable containing sequence file prefixes and directory paths
+prodir="/scratch/nmnh_corals/esme/"
+
+# making a list of sample names
+species=$1
+#
+#
+phyluce_assembly_match_contigs_to_probes \
+    --contigs ${prodir}/long_assemblies/ \
+    --probes ${prodir}/hexa-v2-final-probes.fasta \
+    --output ${prodir}/uce-search-results
+
+echo = `date` job $JOB_NAME done
